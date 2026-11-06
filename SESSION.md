@@ -43,3 +43,13 @@ Built Vite + Tailwind + Shiki site (`src/index.html`, `src/main.ts`, `src/style.
 ### Next
 
 Copy `LOG-ENTRY.md` row to central log. Decide repo rename to `explain-me-data-container`.
+
+## 2026-11-06 — round 4
+
+### Prompt
+
+Uploaded demo: https://explain-me-template-data-container.pages.dev/ — add it to the readme.
+
+### Response
+
+Added `**Live demo:**` line under title in `README.md` (zoomable convention).

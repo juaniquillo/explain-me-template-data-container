@@ -1,5 +1,7 @@
 # explain-me-data-container
 
+**Live demo:** https://explain-me-template-data-container.pages.dev/
+
 Starter for the weekly explain-me tradition.
 
 Each week: pick one piece of tech you worked on but don't fully understand → create `explain-me-<topic>` from this template → learn it via a tiny demo.
