@@ -1,0 +1,9 @@
+# Keep template-agnostic. Per-lesson, append the ignores your stack needs, e.g.:
+# Node: node_modules/ dist/ .next/ out/ *.log
+# Python: __pycache__/ *.pyc .venv/ venv/ .env
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
