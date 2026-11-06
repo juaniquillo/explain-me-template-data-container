@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+/* Manual dark mode: .dark on <html> (toggled + localStorage, defaults to OS). */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Shiki dual-theme switching follows the same .dark class (see
+   https://shiki.style/guide/dual-themes#class-based-dark-mode).
+   Light colors come from shiki's inline styles; only dark needs overriding. */
+html.dark .shiki,
+html.dark .shiki span {
+  color: var(--shiki-dark) !important;
+  background-color: var(--shiki-dark-bg) !important;
+}

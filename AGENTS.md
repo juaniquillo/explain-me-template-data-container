@@ -12,10 +12,8 @@ Verify by execution before calling it done: build, serve + curl, typecheck — o
 
 ## Per-topic overrides
 
-<!-- Fill per-lesson with stack-specific commands and explanation method. Example:
-- Run: `npm run dev` (primary), `npm run build` + `npm run preview`, `npm run typecheck`
-- Deps: `vite@7` (dev server + build), `tailwindcss@4` (demo styling) — why each is needed
-- Env: `.env` location + required vars (e.g. `VITE_SITE_URL`)
-- Method for this tech: overall / usage examples / code walkthrough / interactive + graphs / gotchas
-- Gitignore: append the lines your stack needs (e.g. Node: `node_modules/ dist/` / Python: `__pycache__/ .venv/`)
--->
+- Run: `npm run dev` (primary, serves `src/`), `npm run build` (emits `dist/`), `npm run preview` (serves `dist/`). Secondary: `php src/demo.php` (CLI truth), `node tools/inject-source.mjs` (re-highlight after editing `index.html`). Verify: `npx tsc --noEmit` + `npm run build` + `vite preview` + curl + `php -l src/demo.php`.
+- Deps: `vite@8` (dev server + build), `tailwindcss@4` + `@tailwindcss/vite@4` (demo styling), `shiki@4` (highlight `php` snippets + source viewer at build time), `typescript@5` + `@types/node` (typecheck `main.ts`/`vite.config.ts`). PHP side: none (stdlib only — `IteratorAggregate, Countable, ArrayAccess`). `src/demo.php` inlines a faithful replica of `IsDataContainer`; no composer package needed.
+- Env: Node 26 + PHP >= 8.1 CLI (tested PHP 8.4.16). `.env` at repo root (copy `.env.example`, any `VITE_SITE_URL` works locally); hosting sets `VITE_SITE_URL=https://your-domain` at build time for og:image.
+- Method for this tech: reference (non-interactive) for a competent engineer new to PHP — overall + PHP-primer table (final/trait/interface, magic methods, `ArrayAccess`, `array_merge`, `isset` vs `array_key_exists`, `@template`) + code walkthrough + CLI-checked outputs + gotchas.
+- Gitignore: `node_modules/ dist/ .env .env.local` (+ base OS/editor lines).

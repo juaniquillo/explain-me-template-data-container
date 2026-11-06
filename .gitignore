@@ -7,3 +7,9 @@ Thumbs.db
 .vscode/
 .idea/
 *.swp
+# Per-topic (data-container site: Vite + Node)
+node_modules/
+dist/
+# Local env (see .env.example); hosting provides VITE_SITE_URL at build
+.env
+.env.local
